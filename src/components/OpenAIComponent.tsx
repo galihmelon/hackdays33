@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import {useState} from 'react'
 import {View, TextInput, Text} from 'react-native'
 
 export const OpenAIComponent = () => {
@@ -7,12 +7,13 @@ export const OpenAIComponent = () => {
   return (
     <View style={{padding: 16}}>
       <TextInput
-        style={{height: 40, borderColor: 'gray', borderWidth: 1}}
+        style={{height: 40, borderColor: 'gray', borderWidth: 1, padding: 6}}
         onChangeText={text => setInputValue(text)}
         value={inputValue}
-        placeholder="Enter some text"
+        placeholder="Write a tagline for an ice cream shop."
       />
-      <Text style={{padding: 10}}>You entered: {inputValue}</Text>
+      <Text style={{paddingTop: 10}}>You entered:</Text>
+      <Text style={{paddingTop: 10}}>{inputValue}</Text>
     </View>
   )
 }
